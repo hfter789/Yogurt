@@ -1,6 +1,10 @@
 {
   "jimmy": {
-    "coverImage": "../resources/jimmy/coverImg.jpg"
+    "coverImage": "../resources/jimmy/coverImg3.jpg",
+    "backgroundImage": "../resources/jimmy/background1.jpg",
+    "selfy": "../resources/jimmy/selfy.jpg",
+    "title": "JIAMING CHEN",
+    "description": "Jimmy's description"
   },
 
   "mia": {

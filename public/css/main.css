@@ -2,17 +2,93 @@ body {
   margin: 0px;
 }
 
-div {
+.header-container {
   font-size: 0;
+}
+
+.nav-container {
+  display: inline-block;
+  width: 70%;
+  min-width: 800px;
+  margin-left: 10%;
+}
+
+.nav-item {
+  height: 100%;
+  width: 25%;
+  display: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+  background-color: #577086
+}
+
+.nav-item p {
+  font-size: 18px;
+  color: white;
+  height: 100%;
+  margin: 0;
+  line-height: 50px;
+}
+
+.site-body {
+  opacity: 0.3;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.info-container {
+  height: 500px;
+}
+
+.info-body {
+  top: 75px;
+  height: 350px;
+  width: 55%;
+  min-width: 700px;
+  margin: auto;
+  margin-top: 75px;
+}
+
+.info-body img {
+  height: 100%;
+  float: left;
+}
+
+.text-container {
+  margin-right: 100px;
+  float: right;
+  width: 250px;
+}
+
+.text-container .nav-item {
+  height: 40px;
+  width: 80px;
+  border-style: double;
+}
+
+.text-container .nav-item p {
+  line-height: 40px;
+  color: #1A3541;
+}
+
+.text-container .title {
+  text-align: center;
+
 }
 
 #cover {
   width: 100%;
-  opacity: 0.8;
 }
 
 #navigation {
-  background-color: #353A75;
-  min-height: 50px;
+  background-color: #1A3541;
+  height: 50px;
   width: 100%;
 }
+

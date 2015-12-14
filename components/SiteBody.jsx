@@ -2,6 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Cover = require('./Cover');
 var Navigation = require('./Navigation');
+var InfoBody = require('./InfoBody');
 var config = require('../configs/config.json');
 
 var SiteBody = React.createClass({
@@ -10,11 +11,25 @@ var SiteBody = React.createClass({
   },
 
   render: function() {
-    var path = config[this.props.site].coverImage;
+    var site = this.props.site;
+    var path = config[site].coverImage;
+    var bodyStyle = {
+      backgroundImage: 'url(' + config[site].backgroundImage + ')',
+    };
     return (
       <div>
-        <Cover imagePath = {config[this.props.site].coverImage} />
-        <Navigation />
+        <div style={bodyStyle} className="site-body"></div>
+        <div>
+          <div className="header-container">
+            <Cover imagePath = {config[site].coverImage} />
+            <Navigation />
+          </div>
+          <InfoBody
+          imagePath = {config[site].selfy}
+          title = {config[site].title}
+          description = {config[site].description}
+          />
+        </div>
       </div>
     );
   }
