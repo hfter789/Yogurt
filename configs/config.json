@@ -4,7 +4,25 @@
     "backgroundImage": "../resources/jimmy/background1.jpg",
     "selfy": "../resources/jimmy/selfy.jpg",
     "title": "JIAMING CHEN",
-    "description": "Jimmy's description"
+    "galleryList": [
+      {
+        "original": "../resources/jimmy/galleryImages/image1.jpg",
+        "description": "description1"
+      },
+      {
+        "original": "../resources/jimmy/galleryImages/image2.jpg",
+        "description": "description2"
+      },
+      {
+        "original": "../resources/jimmy/galleryImages/image3.jpg",
+        "description": "description3"
+      },
+      {
+        "original": "../resources/jimmy/galleryImages/image4.jpg",
+        "description": "description4"
+      }
+    ],
+    "description": "Jimmy's description Jimmy's description Jimmy's description Jimmy's description Jimmy's description Jimmy's description Jimmy's description"
   },
 
   "mia": {
