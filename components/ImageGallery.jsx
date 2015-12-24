@@ -1,18 +1,26 @@
 var React = require('react');
+var classnames = require('classnames');
 
 var ImageGallery = React.createClass({
   propTypes: {
     items: React.PropTypes.array.isRequired
   },
+
   render: function() {
     var slides = [];
     this.props.items.map((item, index) => {
+      let slideClassNames = {
+        // 'hidden': this.isSlideShowing(index),
+        'image-gallery-slide': true
+      };
       let slide = (
         <div
           key={index}
-          className='image-gallery-slide'>
+          className={classnames(slideClassNames)}>
           <img src={item.original}/>
-          {item.description}
+          <div className="description">
+            <p> {item.description} </p>
+          </div>
         </div>
       );
       slides.push(slide);

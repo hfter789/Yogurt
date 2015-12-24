@@ -12,7 +12,9 @@ var InfoBody = React.createClass({
     return (
       <div className='info-container'>
         <div className='info-body'>
-          <img src={this.props.imagePath}/>
+          <div className='image-container'>
+            <img src={this.props.imagePath}/>
+          </div>
           <div className='text-container'>
             { !!this.props.title ?
                         <h2 className = 'title'> 

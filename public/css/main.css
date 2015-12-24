@@ -15,9 +15,7 @@ body {
 
 .nav-container {
   display: inline-block;
-  width: 70%;
-  min-width: 800px;
-  margin-left: 10%;
+  width: 100%;
 }
 
 .nav-item {
@@ -70,8 +68,16 @@ body {
 .text-container {
   font-family: Sans-serif;
   margin-right: 50px;
-  float: right;
-  width: 350px;
+  width: 100%;
+  display: block;
+}
+
+@media (min-width: 600px) {
+  .text-container {
+    margin-right: 50px;
+    float: right;
+    width: 350px;
+  }
 }
 
 .text-container .nav-item {
@@ -91,13 +97,16 @@ body {
 }
 
 .gallery-container {
-  height: 600px;
+  height: 700px;
   background-color: #1A3541;
   display: inline-block;
   overflow: hidden;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .image-gallery-slide {
+  width: 49%;
   height: 100%;
   display: inherit;
 }
@@ -105,6 +114,21 @@ body {
 .image-gallery-slide img{
   max-width: 400px;
   max-height: 60%;
+  display: block;
+  margin: auto;
+  padding-top: 10%;
+}
+
+.image-gallery-slide p{
+  color: white;
+  font-family: sans-serif;
+  display: block;
+}
+
+.image-gallery-slide .description{
+  max-width: 80%;
+  display: block;
+  margin: auto;
 }
 
 .gallery-container.button {
@@ -131,5 +155,12 @@ body {
 #navigation {
   background-color: #1A3541;
   height: 50px;
+}
+
+@media (min-width: 800px) {
+  .nav-container {
+    width: 70%;
+    margin-left: 15%;
+  }
 }
 
