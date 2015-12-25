@@ -47,36 +47,42 @@ body {
   z-index: -1;
 }
 
-.info-container {
-  height: 450px;
-}
-
-.info-body {
-  top: 75px;
-  height: 350px;
-  width: 55%;
-  min-width: 700px;
-  margin: auto;
-  margin-top: 75px;
-}
-
-.info-body img {
-  height: 100%;
-  float: left;
-}
-
 .text-container {
+  margin: 20px;
   font-family: Sans-serif;
-  margin-right: 50px;
-  width: 100%;
   display: block;
+}
+
+.text-container p{
+  width: 100%;
+}
+
+.image-container {
+  width:100%;
+}
+
+.image-container img {
+  width: 100%;
 }
 
 @media (min-width: 600px) {
   .text-container {
-    margin-right: 50px;
     float: right;
-    width: 350px;
+    width: 40%;
+    margin-top: 75px;
+    margin-bottom: 75px;
+  }
+
+  .info-body {
+    width: 65%;
+    margin: auto;
+  }
+
+  .image-container {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    float: left;
+    width: 40%;
   }
 }
 
@@ -101,8 +107,6 @@ body {
   background-color: #1A3541;
   display: inline-block;
   overflow: hidden;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 
 .image-gallery-slide {
@@ -132,12 +136,12 @@ body {
 }
 
 .gallery-container.button {
-  top: '50%',
-  position: 'absolute',
-  border: '0px',
-  cursor: 'pointer',
-  fontSize: '6em',
-  fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif'
+  top: '50%';
+  position: 'absolute';
+  border: '0px';
+  cursor: 'pointer';
+  fontSize: '6em';
+  fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif';
 }
 
 .button.prev {
