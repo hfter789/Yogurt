@@ -15,9 +15,16 @@ var SiteBody = React.createClass({
     var site = this.props.site;
     var path = config[site].coverImage;
     var galleryList = config[site].galleryList;
-    var bodyStyle = {
-      backgroundImage: 'url(' + config[site].backgroundImage + ')',
-    };
+    var bodyStyle;
+    if (config[site].background.backgroundImage) {
+      bodyStyle = {
+        backgroundImage: 'url(' + config[site].background.backgroundImage + ')'
+      };
+    } else {
+      bodyStyle = {
+        backgroundColor: config[site].background.backgroundColor
+      };
+    }
     return (
       <div>
         <div style={bodyStyle} className="site-body"></div>

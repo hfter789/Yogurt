@@ -1,7 +1,8 @@
 {
   "jimmy": {
-    "coverImage": "../resources/jimmy/coverImg3.jpg",
-    "backgroundImage": "../resources/jimmy/background1.jpg",
+    "background": {
+      "backgroundColor": "#01D2E3"
+    },
     "selfy": "../resources/jimmy/selfy.jpg",
     "title": "JIAMING CHEN",
     "galleryList": [
@@ -22,7 +23,7 @@
         "description": "description4"
       }
     ],
-    "description": "Jimmy's description Jimmy's description Jimmy's description Jimmy's description Jimmy's description Jimmy's description Jimmy's description"
+    "description": "I am a fullstack web developer that likes to explore different possibilities in computer science. Majority of my work focuses on but not limit to react, nodejs, and emberjs. Currently, I am workon on a project call stockfetcher that will evaluate stocks using different techniques and recommend stocks to users."
   },
 
   "mia": {
