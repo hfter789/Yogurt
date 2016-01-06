@@ -1,17 +1,22 @@
 var React = require('react');
-var NavItem = require('./NavItem');
+import {Nav, NavItem, Navbar} from 'react-bootstrap';
 
 var Navigation = React.createClass({
   render: function() {
     return (
-      <div id='navigation' className='stretch'>
-        <div className = 'nav-container'>
-          <NavItem title='Home' link='#'/>
-          <NavItem title='About Me' link='#'/>
-          <NavItem title='Projects' link='#'/>
-          <NavItem title='Contact Me' link='#'/>
-        </div>
-      </div>
+      <Navbar inverse fixedTop>
+        <Navbar.Header>
+          <Navbar.Toggle />
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav>
+            <NavItem eventKey={1} href="#">Home</NavItem>
+            <NavItem eventKey={2} href="#">About Me</NavItem>
+            <NavItem eventKey={2} href="#">Projects</NavItem>
+            <NavItem eventKey={2} href="#">Contact Me</NavItem>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     );
   }
 });

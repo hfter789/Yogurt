@@ -1,5 +1,6 @@
 var React = require('react');
 var classnames = require('classnames');
+import {Grid, Row, Col} from 'react-bootstrap';
 
 var ImageGallery = React.createClass({
   propTypes: {
@@ -10,27 +11,46 @@ var ImageGallery = React.createClass({
     var slides = [];
     this.props.items.map((item, index) => {
       let slideClassNames = {
-        // 'hidden': this.isSlideShowing(index),
         'image-gallery-slide': true
       };
       let slide = (
         <div
           key={index}
           className={classnames(slideClassNames)}>
-          <img src={item.original}/>
+          <img src={item.original} style={{width: '100%'}}/>
           <div className="description">
-            <p> {item.description} </p>
+            <p style={{
+              color: 'white'
+            }}>
+              {item.description}
+            </p>
           </div>
         </div>
       );
       slides.push(slide);
     });
     return (
-      <div className="gallery-container">
-        <a onClick = {this.handlePrevBtnClick} className="button prev">‹</a>
-        <a onClick = {this.handleNextBtnClick} className="button next">›</a>
-        {slides}
-      </div>
+      <Grid style={
+        {
+          backgroundColor: '#222222',
+          margin: '0px',
+          width: '100%'
+        }
+      }>
+        <Row className="show-grid" style={{
+          paddingTop: '20px' 
+        }}>
+          <Col xs={12} md={4}>
+            {slides[0]}
+          </Col>
+          <Col xs={12} md={4}>
+            {slides[1]}
+          </Col>
+          <Col xs={12} md={4}>
+            {slides[2]}
+          </Col>
+        </Row>
+      </Grid>
     );
   }
 });
