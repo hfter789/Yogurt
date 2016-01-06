@@ -9,7 +9,7 @@ var Navigation = React.createClass({
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-          <Nav>
+          <Nav pullRight>
             <NavItem eventKey={1} href="#">Home</NavItem>
             <NavItem eventKey={2} href="#">About Me</NavItem>
             <NavItem eventKey={2} href="#">Projects</NavItem>
