@@ -1,6 +1,6 @@
 var React = require('react');
 var classnames = require('classnames');
-import {Grid, Row, Col, Image} from 'react-bootstrap';
+import {Grid, Row, Col, Image, Carousel, CarouselItem} from 'react-bootstrap';
 
 var ImageGallery = React.createClass({
   propTypes: {
@@ -10,42 +10,27 @@ var ImageGallery = React.createClass({
   render: function() {
     var slides = [];
     this.props.items.map((item, index) => {
-      let slideClassNames = {
-        'image-gallery-slide': true
-      };
       let slide = (
-        <Col xs={12} md={4}>
+        <CarouselItem>
+          <img width={900} height={500} src={item.original} style={{
+            margin: '0 auto'
+          }}/>
           <div
-            key={index}
-            className={classnames(slideClassNames)}>
-            <Image src={item.original} thumbnail />
-            <div className="description">
-              <p style={{
-                color: 'white',
-                maxWidth: '100%'
-              }}>
+            className="carousel-caption">
+            <div>
+              <p>
                 {item.description}
               </p>
             </div>
           </div>
-        </Col>
+        </CarouselItem>
       );
       slides.push(slide);
     });
     return (
-      <Grid style={
-        {
-          backgroundColor: '#222222',
-          margin: '0px',
-          width: '100%'
-        }
-      }>
-        <Row className="show-grid" style={{
-          paddingTop: '20px' 
-        }}>
-          { slides }
-        </Row>
-      </Grid>
+      <Carousel>
+        { slides }
+      </Carousel>
     );
   }
 });

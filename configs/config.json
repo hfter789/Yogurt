@@ -3,23 +3,23 @@
     "background": {
       "backgroundColor": "#F9F9F9"
     },
-    "selfy": "../resources/jimmy/selfy.jpg",
+    "selfy": "../resources/jimmy/cselfy.jpg",
     "title": "JIAMING CHEN",
     "galleryList": [
       {
-        "original": "../resources/jimmy/galleryImages/image1.jpg",
-        "description": "this is a really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really long description"
+        "original": "../resources/jimmy/galleryImages/cimage1.jpg",
+        "description": "description1"
       },
       {
-        "original": "../resources/jimmy/galleryImages/image2.jpg",
-        "description": "this is a really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really long description"
+        "original": "../resources/jimmy/galleryImages/cimage2.jpg",
+        "description": "description2"
       },
       {
-        "original": "../resources/jimmy/galleryImages/image3.jpg",
+        "original": "../resources/jimmy/galleryImages/cimage3.jpg",
         "description": "description3"
       },
       {
-        "original": "../resources/jimmy/galleryImages/image4.jpg",
+        "original": "../resources/jimmy/galleryImages/cimage4.jpg",
         "description": "description4"
       }
     ],
