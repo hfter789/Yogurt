@@ -6,10 +6,15 @@ var Navigation = React.createClass({
     return (
       <Navbar inverse fixedTop>
         <Navbar.Header>
+          <Navbar.Brand>
+            <a href="#" style={{
+              fontFamily: 'cursive'
+            }}>JIAMING CHEN</a>
+          </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-          <Nav pullRight>
+          <Nav>
             <NavItem eventKey={1} href="#">Home</NavItem>
             <NavItem eventKey={2} href="#">About Me</NavItem>
             <NavItem eventKey={2} href="#">Projects</NavItem>

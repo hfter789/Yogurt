@@ -16,7 +16,7 @@ var SiteBody = React.createClass({
     var path = config[site].coverImage;
     var galleryList = config[site].galleryList;
     return (
-      <div style={{backgroundColor: '#F9F9F9'}}>
+      <div style={{backgroundColor: '#ECECEC'}}>
         <div>
           <div className="header-container">
             <Cover imagePath = {config[site].coverImage} />

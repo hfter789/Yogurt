@@ -1,5 +1,5 @@
 var React = require('react');
-import {Grid, Row, Col, Button} from 'react-bootstrap';
+import {Grid, Row, Col, Button, Image} from 'react-bootstrap';
 
 var InfoBody = React.createClass({
   propTypes: {
@@ -10,11 +10,15 @@ var InfoBody = React.createClass({
   render: function() {
     var title = this.props.title;
     return (
-      <Grid style={{'padding': '30px'}}>
+      <Grid style={{
+        padding: '30px',
+        paddingTop: '100px',
+        paddingBottom: '100px'
+      }}>
         <Row className="show-grid">
           <Col xs={12} md={4} mdPush={1} style={{padding: '0px'}}>
             <div className='image-container'>
-              <img src={this.props.imagePath} style={{width: '100%'}}/>
+              <Image src={this.props.imagePath} thumbnail/>
             </div>
           </Col>
           <Col xs={12} md={4} mdPush={2}>
@@ -26,6 +30,9 @@ var InfoBody = React.createClass({
                   :
                   null
               }
+              <h5>
+                Full Stack Web Developer
+              </h5>
               <p>
                 {this.props.description}
               </p>
