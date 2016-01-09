@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "babel --presets es2015,react components --out-dir components-dist",
     "bundle": "browserify -t reactify components-dist/SiteBody.js -o public/js/bundle.js",
-    "dev": "gulp dev"
+    "start": "gulp start"
   },
   "author": "Jimmy Chen",
   "license": "ISC",
@@ -16,8 +16,13 @@
     "babelify": "^7.2.0",
     "classnames": "^2.2.1",
     "express": "^4.13.3",
+    "gulp-babel": "^6.1.1",
+    "gulp-react": "^3.1.0",
+    "lodash": "^3.10.1",
+    "path": "^0.12.7",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
+    "react-router": "^1.0.0-rc3",
     "reactify": "^1.1.1"
   },
   "devDependencies": {

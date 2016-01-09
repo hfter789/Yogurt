@@ -2,8 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Navigation = require('./Navigation');
 var InfoBody = require('./InfoBody');
-var ImageGallery = require('./ImageGallery');
-var config = require('../configs/config.json');
+var config = require('../../configs/config.json');
 
 var SiteBody = React.createClass({
   propTypes: {
@@ -11,9 +10,10 @@ var SiteBody = React.createClass({
   },
 
   render: function() {
-    var site = this.props.site;
-    var path = config[site].coverImage;
-    var galleryList = config[site].galleryList;
+    let site = this.props.site;
+    let siteConfig = config[site];
+    let path = siteConfig.coverImage;
+    let galleryList = siteConfig.galleryList;
     return (
       <div>
         <div>
@@ -23,12 +23,12 @@ var SiteBody = React.createClass({
               height: '30px'
             }}>
             </div>
-            <Navigation />
+            <Navigation site={site} brand={siteConfig.title}/>
           </div>
           <InfoBody
-          imagePath = {config[site].selfy}
-          title = {config[site].title}
-          description = {config[site].description}
+          imagePath = {siteConfig.selfy}
+          title = {siteConfig.title}
+          description = {siteConfig.description}
           />
         </div>
       </div>
@@ -36,8 +36,4 @@ var SiteBody = React.createClass({
   }
 });
 
-var site = document.getElementById('content').className;
-
-ReactDOM.render(
-  <SiteBody site={site}/>, document.getElementById('content')
-);
+module.exports = SiteBody;
