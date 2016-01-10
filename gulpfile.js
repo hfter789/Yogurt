@@ -3,8 +3,14 @@ var nodemon = require('gulp-nodemon');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var babel = require('gulp-babel');
+var clean = require('gulp-clean');
 
-gulp.task('bundle', function () {
+gulp.task('clean', function () {
+  return gulp.src('dist', {read: false})
+  .pipe(clean());
+});
+
+gulp.task('bundle', function (cb) {
   browserify({
     entries: './dist/components/App.js',
     extensions: ['.js'],
@@ -13,9 +19,10 @@ gulp.task('bundle', function () {
   .bundle()
   .pipe(source('bundle.js'))
   .pipe(gulp.dest('./public/js'));
+  cb();
 });
 
-gulp.task('transpile', function () {
+gulp.task('transpile', function (cb) {
     return gulp.src('./src/**/*.jsx')
         .pipe(babel({
             presets: ['es2015', 'react']

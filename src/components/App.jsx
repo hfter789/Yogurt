@@ -2,10 +2,8 @@ import { Router, Route } from 'react-router';
 import React from 'react';
 import { render } from 'react-dom';
 import routes from './routes';
-var isNode = typeof module !== 'undefined' && module.exports
+import createBrowserHistory from 'history/lib/createBrowserHistory';
 
-if (isNode) {
-  module.exports = routes;
-} else {
-  render(routes, document.getElementById('content'));
+if(typeof document !== 'undefined') {
+  render(<Router routes={routes} history={createBrowserHistory()}/>, document.getElementById('content'));
 }
