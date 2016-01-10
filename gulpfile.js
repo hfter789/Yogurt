@@ -9,7 +9,7 @@ gulp.task('clean', function () {
   return del(['dist/**/*']);
 });
 
-gulp.task('bundle', function (cb) {
+gulp.task('bundle', ['transpile'], function () {
   browserify({
     entries: './dist/components/App.js',
     extensions: ['.js'],
@@ -18,10 +18,9 @@ gulp.task('bundle', function (cb) {
   .bundle()
   .pipe(source('bundle.js'))
   .pipe(gulp.dest('./public/js'));
-  cb();
 });
 
-gulp.task('transpile', function (cb) {
+gulp.task('transpile', function () {
     return gulp.src('./src/**/*.jsx')
         .pipe(babel({
             presets: ['es2015', 'react']
@@ -29,12 +28,10 @@ gulp.task('transpile', function (cb) {
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('build', ['transpile', 'bundle']);
-
-gulp.task('start', ['build'], function () {
+gulp.task('start', ['bundle'], function () {
     nodemon({
         script: './dist/Server.js'
         , ext: 'jsx json'
-        , tasks: ['build']
+        , tasks: ['bundle']
     });
 });
