@@ -3,7 +3,7 @@
     "background": {
       "backgroundColor": "#F9F9F9"
     },
-    "selfy": "../resources/jimmy/cselfy.jpg",
+    "selfy": "/resources/jimmy/cselfy.jpg",
     "title": "JIAMING CHEN",
     "galleryList": [
       {
@@ -23,7 +23,7 @@
         "description": "description4"
       }
     ],
-    "description": "I am a fullstack web developer that likes to explore different possibilities in computer science. Majority of my work focuses on but not limit to react, nodejs, and emberjs. Currently, I am workon on a project call stockfetcher that will evaluate stocks using different techniques and recommend stocks to users."
+    "description": "I am a fullstack web developer who like to challenge myself. Majority of my work focuses on but not limit to react, nodejs, and emberjs. Currently, I am workon on a project call stockfetcher that will evaluate stocks using different techniques and recommend stocks to users."
   },
 
   "mia": {
