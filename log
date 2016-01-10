@@ -1,9 +1,9 @@
 * navigation button not responding. (DONE)
-* gulpfile is not running task in sequence. (Done but too couple)
+* gulpfile is not running task in sequence. (DONE but too couple)
+* clean up dependencies (DONE)
+* make navigation a Link instead of an a tag (react-router-bootstrap) (DONE)
 
-* clean up dependencies
-* make navigation a Link instead of an a tag (react-router-bootstrap)
-
+* set Navigation as default component
 * setup AWS web app
 * upgrade React-Router to 2.0
 * clean up vars (all use ES6)
