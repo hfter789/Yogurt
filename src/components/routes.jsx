@@ -1,32 +1,12 @@
+import React from 'react';
+import {Router, IndexRoute, Route, Link} from 'react-router';
 import SiteJimmy from './SiteJimmy';
 import About from './About';
-import {Router, IndexRoute, Route, Link} from 'react-router';
-import React from 'react';
-
-const App = React.createClass({
-  render() {
-    return (
-      <div>
-        {this.props.children}
-      </div>
-    )
-  }
-})
-
-const Home = React.createClass({
-  render() {
-    return (
-      <p>
-        Home
-      </p>
-    )
-  }
-})
-
-
+import Root from './Root';
+import Home from './Home';
 
 const routes = (
-  <Route path="/" component={App}>
+  <Route path="/" component={Root}>
     <IndexRoute component={Home} />
     <Route path='jimmy' component={SiteJimmy}/>
     <Route path='jimmy/about' component={About}/>

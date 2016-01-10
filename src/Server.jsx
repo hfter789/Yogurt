@@ -6,9 +6,9 @@ import React from 'react';
 import _ from 'lodash';
 import fs from 'fs';
 import path from 'path';
+
 var app = express();
 var template = fs.readFileSync(path.join(__dirname, '../public/serverTemplate.html'), 'utf8');
-
 
 app.all('*', (req, res, next) => {
   console.log(req.method, req.url);
