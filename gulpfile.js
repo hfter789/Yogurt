@@ -3,11 +3,10 @@ var nodemon = require('gulp-nodemon');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var babel = require('gulp-babel');
-var clean = require('gulp-clean');
+var del = require('del');
 
 gulp.task('clean', function () {
-  return gulp.src('dist', {read: false})
-  .pipe(clean());
+  return del(['dist/**/*']);
 });
 
 gulp.task('bundle', function (cb) {
