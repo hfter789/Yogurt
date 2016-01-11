@@ -28,7 +28,7 @@ gulp.task('transpile', function () {
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('start', ['bundle'], function () {
+gulp.task('dev', ['bundle'], function () {
     nodemon({
         script: './dist/Server.js'
         , ext: 'jsx json'

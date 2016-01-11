@@ -29,7 +29,7 @@ app.all('*', (req, res, next) => {
 })
 
 app.use(express.static('public'));
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 8081));
 
 app.listen(app.get('port'), () => {
   console.log('Server started: http://localhost:' + app.get('port') + '/');
