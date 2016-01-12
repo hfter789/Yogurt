@@ -3,15 +3,21 @@
 * gulpfile is not running task in sequence. (DONE but too couple)
 * clean up dependencies (DONE)
 * make navigation a Link instead of an a tag (react-router-bootstrap) (DONE)
+* setup AWS web app
+* fix aws not serving image issue (try out using prefix path eg /static)
+  - aws serving is CASE-SENSITIVE! I had the image name as cselfy.JPG which
+    would not get return if I request cselfy.jpg
 
 --------
 * set Navigation as default component
-* setup AWS web app
+* design about page
+* design project page
+* design contact me page
 * clean up vars (all use ES6)
-* test with Mocha
-* continuous integration with Travis
 
 --------
 backlog
+* test with Mocha
+* continuous integration with Travis
 * upgrade React-Router to 2.0
 * decouple gulpfile
