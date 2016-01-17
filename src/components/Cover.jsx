@@ -1,6 +1,6 @@
-var React = require('react');
+import React from 'react';
 
-var Cover = React.createClass({
+const Cover = React.createClass({
   propTypes: {
     imagePath: React.PropTypes.string.isRequired
   },

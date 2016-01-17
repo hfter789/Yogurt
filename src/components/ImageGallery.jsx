@@ -1,14 +1,14 @@
-var React = require('react');
-var classnames = require('classnames');
+import React from 'react';
+import classnames from 'classnames';
 import {Grid, Row, Col, Image, Carousel, CarouselItem} from 'react-bootstrap';
 
-var ImageGallery = React.createClass({
+const ImageGallery = React.createClass({
   propTypes: {
     items: React.PropTypes.array.isRequired
   },
 
   render: function() {
-    var slides = [];
+    let slides = [];
     this.props.items.map((item, index) => {
       let slide = (
         <CarouselItem>

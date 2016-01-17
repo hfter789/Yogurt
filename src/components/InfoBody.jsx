@@ -1,14 +1,14 @@
-var React = require('react');
+import React from 'react';
 import {Grid, Row, Col, Button, Image} from 'react-bootstrap';
 
-var InfoBody = React.createClass({
+const InfoBody = React.createClass({
   propTypes: {
     imagePath: React.PropTypes.string.isRequired,
     description: React.PropTypes.string.isRequired
   },
 
   render: function() {
-    var title = this.props.title;
+    let title = this.props.title;
     return (
       <Grid style={{
         padding: '30px',

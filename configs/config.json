@@ -5,22 +5,30 @@
     },
     "selfy": "/resources/jimmy/cselfy.jpg",
     "title": "JIAMING CHEN",
-    "galleryList": [
+    "imageList": [
       {
-        "original": "../resources/jimmy/galleryImages/cimage1.jpg",
-        "description": "description1"
+        "link": "../resources/jimmy/parallaxImages/image1.jpg",
+        "description": "From University of Washington"
       },
       {
-        "original": "../resources/jimmy/galleryImages/cimage2.jpg",
-        "description": "description2"
+        "link": "../resources/jimmy/parallaxImages/image2.jpg",
+        "description": "Good student"
       },
       {
-        "original": "../resources/jimmy/galleryImages/cimage3.jpg",
-        "description": "description3"
+        "link": "../resources/jimmy/parallaxImages/image3.jpg",
+        "description": "Loves Challenge"
       },
       {
-        "original": "../resources/jimmy/galleryImages/cimage4.jpg",
-        "description": "description4"
+        "link": "../resources/jimmy/parallaxImages/image4.jpg",
+        "description": "Enjoy the Nature"
+      },
+      {
+        "link": "../resources/jimmy/parallaxImages/image5.jpg",
+        "description": "explore"
+      },
+      {
+        "link": "../resources/jimmy/parallaxImages/image6.jpg",
+        "description": "END"
       }
     ],
     "description": "I am a fullstack web developer who like to challenge myself. Majority of my work focuses on but not limit to react, nodejs, and emberjs. Currently, I am workon on a project call stockfetcher that will evaluate stocks using different techniques and recommend stocks to users."

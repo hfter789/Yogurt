@@ -7,16 +7,24 @@
 * fix aws not serving image issue (try out using prefix path eg /static)
   - aws serving is CASE-SENSITIVE! I had the image name as cselfy.JPG which
     would not get return if I request cselfy.jpg
+* set Navigation as default component
+* implement parralax scrolling for about me. 
+* image crop center (crop to left now)
+* improve website on resize performance issue (size issue)
+* design about page
+* clean up vars (all use ES6)
+* add description to parallax
 
 --------
-* set Navigation as default component
-* design about page
+* improve home page
 * design project page
 * design contact me page
-* clean up vars (all use ES6)
+* fix image doesn't cover 100% width when browser width is big problem
+* figure out a better solution to specify site in Route. (currently using wrapper)
 
 --------
 backlog
+* (warning) Each child in an array or iterator should have a unique "key" prop
 * test with Mocha
 * continuous integration with Travis
 * upgrade React-Router to 2.0

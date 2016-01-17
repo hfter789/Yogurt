@@ -1,7 +1,7 @@
 import React from 'react';
 import SiteBody from './SiteBody';
 
-var SiteJimmy = React.createClass({
+const SiteJimmy = React.createClass({
   render() {
     return (
       <SiteBody site={'jimmy'} />
