@@ -19,6 +19,7 @@ const SiteBody = React.createClass({
 				imagePath = {siteConfig.selfy}
 				title = {siteConfig.title}
 				description = {siteConfig.description}
+				backgroundUrl = {siteConfig.backgroundUrl}
 				/>
 		);
 	}

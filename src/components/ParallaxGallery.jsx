@@ -41,6 +41,7 @@ const About = React.createClass({
                 fontWeight: 300,
                 textTransform: 'uppercase',
                 textAlign: 'center',
+                textShadow: '0 0 5px black',
                 fontSize: '8vmax'
             }}>
                 { desc }
@@ -68,7 +69,6 @@ const About = React.createClass({
                             left: (this.state.windowWidth - IMAGE_WIDTH) / 2
                         }}>
                             <img src = {link} style = {{
-                                height: '800px',
                                 zIndex: -1
                             }} />
                         </div>

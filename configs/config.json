@@ -3,8 +3,10 @@
     "background": {
       "backgroundColor": "#F9F9F9"
     },
+    "backgroundUrl": "../resources/jimmy/background.jpg",
     "selfy": "/resources/jimmy/cselfy.jpg",
     "title": "JIAMING CHEN",
+    "brand": "JC",
     "imageList": [
       {
         "link": "../resources/jimmy/parallaxImages/image1.jpg",
@@ -20,7 +22,7 @@
       },
       {
         "link": "../resources/jimmy/parallaxImages/image4.jpg",
-        "description": "Enjoy the Nature"
+        "description": "Enjoy Nature"
       },
       {
         "link": "../resources/jimmy/parallaxImages/image5.jpg",
@@ -31,7 +33,7 @@
         "description": "END"
       }
     ],
-    "description": "I am a fullstack web developer who like to challenge myself. Majority of my work focuses on but not limit to react, nodejs, and emberjs. Currently, I am workon on a project call stockfetcher that will evaluate stocks using different techniques and recommend stocks to users."
+    "description": "I am a fullstack web developer who like to challenge myself. Majority of my work focuses on but not limit to react, nodejs, and emberjs. Currently, I am work on on a project call stockfetcher that will evaluate stocks using different techniques and recommend stocks to users."
   },
 
   "mia": {

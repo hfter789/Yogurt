@@ -17,6 +17,7 @@
 
 --------
 * improve home page
+    - make background image cover 100%
 * design project page
 * design contact me page
 * fix image doesn't cover 100% width when browser width is big problem

@@ -6,8 +6,8 @@ const JimmyNavigation = React.createClass({
 	render: function() {
 		let siteConfig = config.jimmy;
 		return (
-			<div style={{paddingTop: '50px'}}>
-				<Navigation site='jimmy' brand={siteConfig.title}/>
+			<div>
+				<Navigation site='jimmy' brand={siteConfig.brand}/>
 				{this.props.children}
 			</div>
 		);
