@@ -6,7 +6,38 @@
     "backgroundUrl": "../resources/jimmy/background.jpg",
     "selfy": "/resources/jimmy/cselfy.jpg",
     "title": "JIAMING CHEN",
+    "subTitle": "Web Developer / Learner",
     "brand": "JC",
+    "projectTitle": "What I Study",
+    "projectImages": [
+      {
+        "link": "../resources/jimmy/projectImages/react.png"
+      },
+      {
+        "link": "../resources/jimmy/projectImages/flux.png"
+      },
+      {
+        "link": "../resources/jimmy/projectImages/nodejs.png"
+      },
+      {
+        "link": "../resources/jimmy/projectImages/html5css3.png"
+      },
+      {
+        "link": "../resources/jimmy/projectImages/emberjs.png"
+      },
+      {
+        "link": "../resources/jimmy/projectImages/java.png"
+      },
+      {
+        "link": "../resources/jimmy/projectImages/python.png"
+      },
+      {
+        "link": "../resources/jimmy/projectImages/arduino.png"
+      },
+      {
+        "link": "../resources/jimmy/projectImages/c.png"
+      }
+    ],
     "imageList": [
       {
         "link": "../resources/jimmy/parallaxImages/image1.jpg",
@@ -33,7 +64,7 @@
         "description": "END"
       }
     ],
-    "description": "I am a fullstack web developer who like to challenge myself. Majority of my work focuses on but not limit to react, nodejs, and emberjs. Currently, I am work on on a project call stockfetcher that will evaluate stocks using different techniques and recommend stocks to users."
+    "description": ""
   },
 
   "mia": {

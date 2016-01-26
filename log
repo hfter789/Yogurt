@@ -16,15 +16,17 @@
 * add description to parallax
 
 --------
+* on hover, projectDisplay's organization would mess up.
 * improve home page
     - make background image cover 100%
-* design project page
-* design contact me page
+* client side navigation does not reset scroll
 * fix image doesn't cover 100% width when browser width is big problem
 * figure out a better solution to specify site in Route. (currently using wrapper)
 
 --------
 backlog
+* design project page
+* design contact me page
 * (warning) Each child in an array or iterator should have a unique "key" prop
 * test with Mocha
 * continuous integration with Travis

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Navigation from './Navigation';
 import InfoBody from './InfoBody';
 import config from '../../configs/config.json';
+import ProjectDisplay from './ProjectDisplay';
 
 const SiteBody = React.createClass({
 	propTypes: {
@@ -15,12 +16,17 @@ const SiteBody = React.createClass({
 		let path = siteConfig.coverImage;
 		let galleryList = siteConfig.galleryList;
 		return (
-			<InfoBody
-				imagePath = {siteConfig.selfy}
-				title = {siteConfig.title}
-				description = {siteConfig.description}
-				backgroundUrl = {siteConfig.backgroundUrl}
-				/>
+			<div>
+				<InfoBody
+					imagePath = {siteConfig.selfy}
+					title = {siteConfig.title}
+					subTitle = {siteConfig.subTitle}
+					description = {siteConfig.description}
+					backgroundUrl = {siteConfig.backgroundUrl}
+					/>
+				<ProjectDisplay images = {siteConfig.projectImages}
+				  projectTitle = {siteConfig.projectTitle}/>
+			</div>
 		);
 	}
 });

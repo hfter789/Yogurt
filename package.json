@@ -4,8 +4,6 @@
   "description": "our bio website",
   "main": "index.js",
   "scripts": {
-    "compile": "babel --presets es2015,react components --out-dir components-dist",
-    "bundle": "browserify -t reactify components-dist/SiteBody.js -o public/js/bundle.js",
     "dev": "gulp dev",
     "start": "node ./dist/Server.js"
   },
