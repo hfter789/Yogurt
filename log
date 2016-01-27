@@ -14,9 +14,10 @@
 * design about page
 * clean up vars (all use ES6)
 * add description to parallax
+* on hover, projectDisplay's organization would mess up.
 
 --------
-* on hover, projectDisplay's organization would mess up.
+* add description to projectImage (IP)
 * improve home page
     - make background image cover 100%
 * client side navigation does not reset scroll

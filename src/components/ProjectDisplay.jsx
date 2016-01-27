@@ -1,5 +1,6 @@
 import React from 'react';
 import {Col} from 'react-bootstrap';
+import ImageItem from './ImageItem';
 
 const ProjectDisplay = React.createClass({
 	propTypes: {
@@ -7,15 +8,21 @@ const ProjectDisplay = React.createClass({
 		images: React.PropTypes.array
 	},
 
+	getInitialState() {
+		return ({
+			currentOpen: -1
+		});
+	},
+
+	handleClick(event) {
+		console.log(event);
+	},
+
 	renderImages() {
 		let images = [];
-		this.props.images.forEach((image) => {
+		this.props.images.forEach((image, index) => {
 			images.push(
-				<Col xs={6} md={4} style={{
-					padding: '20px'
-				}}>
-		        	<img className='project-image' src={image.link}/>
-		        </Col>
+				<ImageItem image={image} index={index} clickHandler={this.handleClick.bind(this, index)}/>
 		    );
 		});
 		return images;
