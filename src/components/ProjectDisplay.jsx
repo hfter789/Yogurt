@@ -1,7 +1,9 @@
 import React from 'react';
 import {Col} from 'react-bootstrap';
 import ImageItem from './ImageItem';
+import DescriptionModal from './DescriptionModal';
 
+const NO_MODAL_INDEX = -1;
 const ProjectDisplay = React.createClass({
 	propTypes: {
 		projectTitle: React.PropTypes.string,
@@ -10,19 +12,30 @@ const ProjectDisplay = React.createClass({
 
 	getInitialState() {
 		return ({
-			currentOpen: -1
+			currentOpen: NO_MODAL_INDEX
 		});
 	},
 
-	handleClick(event) {
-		console.log(event);
+	handleImageClick(imageIndex) {
+		if (imageIndex !== this.state.currentOpen) {
+			this.setState({
+				currentOpen: imageIndex
+			})
+		}
+	},
+
+	handleModalClose() {
+		console.log('hi');
+		this.setState({
+			currentOpen: NO_MODAL_INDEX
+		});
 	},
 
 	renderImages() {
 		let images = [];
 		this.props.images.forEach((image, index) => {
 			images.push(
-				<ImageItem image={image} index={index} clickHandler={this.handleClick.bind(this, index)}/>
+				<ImageItem image={image} index={index} handleImageClick={this.handleImageClick.bind(this, index)}/>
 		    );
 		});
 		return images;
@@ -30,8 +43,15 @@ const ProjectDisplay = React.createClass({
 
 	render: function() {
 		let props = this.props;
+		let desc = '';
+		let showModal = false;
+		let currentOpen = this.state.currentOpen;
 		if (!props.images) {
 			return null;
+		}
+		if (currentOpen !== NO_MODAL_INDEX) {
+			desc = props.images[currentOpen].desc;
+			showModal = true;
 		}
 
 		return (
@@ -50,6 +70,11 @@ const ProjectDisplay = React.createClass({
 				}}>
 			        { this.renderImages() }
 				</div>
+				<DescriptionModal
+					showModal={showModal}
+					handleModalClose={this.handleModalClose}
+					desc={desc}
+				/>
 			</div>
 		);
 	}

@@ -11,31 +11,32 @@
     "projectTitle": "What I Study",
     "projectImages": [
       {
-        "link": "../resources/jimmy/projectImages/react.png"
+        "link": "../resources/jimmy/projectImages/react.png",
+        "desc": "**In Yahoo** <br/> I worked across news, style, movies, autos, etc, my role includes: \n - Feature Development \n - Bug Fixing \n - Performance Improvement \n - Build Monitoring \n - Testing"
       },
       {
-        "link": "../resources/jimmy/projectImages/flux.png"
+        "link": "../resources/jimmy/projectImages/nodejs.png",
+        "desc": "**In Yahoo** <br/> I implemented a configuration middleware for the configuration team. <br/> This feature can parse complicated configuration file retrieved from the backend and send the simplified data to the frontend"
       },
       {
-        "link": "../resources/jimmy/projectImages/nodejs.png"
+        "link": "../resources/jimmy/projectImages/emberjs.png",
+        "desc": "**In Yahoo** <br/> I implemented a new UI for the configuration team to simplify the display of configuration files. <br/> This feature drastically increases the usability of the configuration web app"
       },
       {
-        "link": "../resources/jimmy/projectImages/html5css3.png"
+        "link": "../resources/jimmy/projectImages/python.png",
+        "desc": "**In School** <br/> I architected and implemented a Tor Router that uses TorNode to secure users' browsing connection."
       },
       {
-        "link": "../resources/jimmy/projectImages/emberjs.png"
+        "link": "../resources/jimmy/projectImages/arduino.png",
+        "desc": "**In School** <br/> I architected and implemented heartbeat counter that counts heartbeat accurately 80% of the time. "
       },
       {
-        "link": "../resources/jimmy/projectImages/java.png"
+        "link": "../resources/jimmy/projectImages/java.png",
+        "desc": "**In School** <br/> "
       },
       {
-        "link": "../resources/jimmy/projectImages/python.png"
-      },
-      {
-        "link": "../resources/jimmy/projectImages/arduino.png"
-      },
-      {
-        "link": "../resources/jimmy/projectImages/c.png"
+        "link": "../resources/jimmy/projectImages/c.png",
+        "desc": "**In School** <br/> file server"
       }
     ],
     "imageList": [
