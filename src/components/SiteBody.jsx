@@ -6,12 +6,9 @@ import config from '../../configs/config.json';
 import ProjectDisplay from './ProjectDisplay';
 
 const SiteBody = React.createClass({
-	propTypes: {
-		site: React.PropTypes.string.isRequired
-	},
 
 	render: function() {
-		let site = this.props.site;
+		let site = this.props.route.site;
 		let siteConfig = config[site];
 		let path = siteConfig.coverImage;
 		let galleryList = siteConfig.galleryList;

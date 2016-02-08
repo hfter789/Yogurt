@@ -1,11 +1,10 @@
 import React from 'react';
-import { Col } from 'react'
+import { Col } from 'react-bootstrap';
+import config from '../../configs/config.json';
+
 const IMAGE_WIDTH = 1421; //px
 
 const About = React.createClass({
-    propType: {
-        imageList: React.PropTypes.array.isRequired
-    },
 
     getInitialState() {
         return {
@@ -49,9 +48,9 @@ const About = React.createClass({
         );
     },
 
-    renderImages() {
+    renderImages(imageList) {
         let images = [];
-        this.props.imageList.forEach((pair, index) => {
+        imageList.forEach((pair, index) => {
             let {link, description} = pair;
             if (link) {
                 images.push(
@@ -61,7 +60,8 @@ const About = React.createClass({
                         height: '800px',
                         width: '100%',
                         zIndex: 1,
-                        display: this.state.showImage ? '' : 'none'
+                        display: this.state.showImage ? '' : 'none',
+                        clip: 'rect(0, auto, auto, 0);'
                     }}>
                         <div style = {{
                             top: '50px',
@@ -81,12 +81,13 @@ const About = React.createClass({
     },
 
     render() {
-        if (!this.props.imageList) {
+        let imageList = config[this.props.route.site].imageList;
+        if (!imageList) {
             return null;
         }
         return (
             <div>
-                { this.renderImages() }
+                { this.renderImages(imageList) }
             </div>
         );
     }

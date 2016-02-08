@@ -1,34 +1,31 @@
 import React from 'react';
 import {Nav, NavItem, Navbar} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import config from '../../configs/config.json';
 
 const Navigation = React.createClass({
-	propTypes: {
-		site: React.PropTypes.string.isRequired,
-		brand: React.PropTypes.string
-	},
 
-	renderBrand() {
-		if (this.props.brand) {
+	renderBrand(brand) {
+		if (brand) {
 			return (
 					<Navbar.Brand>
 						<a href='#' style={{
 							paddingRight: '80px',
 							fontFamily: 'cursive'
-						}}>{this.props.brand}</a>
+						}}>{brand}</a>
 					</Navbar.Brand>
 			);
 		}
 	},
 
-	renderNavItems() {
+	renderNavItems(site) {
 		return (
 			<div className="header-container">
 				<Nav>
-					<LinkContainer to={'/' + this.props.site}>
+					<LinkContainer to={'/' + site}>
 						<NavItem eventKey={1}>HOME</NavItem>
 					</LinkContainer>
-					<LinkContainer to={'/' + this.props.site + '/about'}>
+					<LinkContainer to={'/' + site + '/about'}>
 						<NavItem eventKey={2}>ABOUT ME</NavItem>
 					</LinkContainer>
 					{ /*<NavItem eventKey={2} href='#'>Projects</NavItem> */}
@@ -42,16 +39,22 @@ const Navigation = React.createClass({
 	},
 
 	render: function() {
+		// let site = this.props.route.site;
+		let site = 'jimmy';
+		let siteConfig = config[site];
 		return (
-			<Navbar inverse fixedTop>
-				<Navbar.Header>
-					{ this.renderBrand() }
-					<Navbar.Toggle />
-				</Navbar.Header>
-				<Navbar.Collapse>
-						{ this.renderNavItems() }
-				</Navbar.Collapse>
-			</Navbar>
+			<div>
+				<Navbar inverse fixedTop>
+					<Navbar.Header>
+						{ this.renderBrand(siteConfig.brand) }
+						<Navbar.Toggle />
+					</Navbar.Header>
+					<Navbar.Collapse>
+						{ this.renderNavItems(site) }
+					</Navbar.Collapse>
+				</Navbar>
+				{ this.props.children }
+			</div>
 		);
 	}
 });

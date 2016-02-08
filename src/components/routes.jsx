@@ -1,16 +1,15 @@
 import React from 'react';
 import {Router, IndexRoute, Route, Link} from 'react-router';
-import SiteJimmy from './SiteJimmy';
 import ParallaxGallery from './ParallaxGallery';
 import Root from './Root';
-import JimmyNavigation from './JimmyNavigation';
-import JimmyParallax from './JimmyParallax';
+import Navigation from './Navigation';
+import SiteBody from './SiteBody';
 
 const routes = (
   <Route path="/" component={Root}>
-    <Route path='jimmy' component={JimmyNavigation}>
-      <IndexRoute component={SiteJimmy} />
-      <Route path='about' component={JimmyParallax}/>
+    <Route path='jimmy' component={Navigation} site='jimmy'>
+      <IndexRoute component={SiteBody} site='jimmy'/>
+      <Route path='about' component={ParallaxGallery} site='jimmy'/>
     </Route>
   </Route>
 );

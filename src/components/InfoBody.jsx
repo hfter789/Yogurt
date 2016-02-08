@@ -13,30 +13,44 @@ const InfoBody = React.createClass({
   render: function() {
     let title = this.props.title;
     return (
-      <div style={{
-        height: '700px',
-        backgroundImage: 'url(' + this.props.backgroundUrl + ')'
+      <div id='background-img' style={{
+        height: '100vh',
+        background: 'url(' + this.props.backgroundUrl + ') no-repeat center center fixed',
+        backgroundSize: 'cover'
       }}>
         <Grid style={{
           padding: '30px',
-          paddingTop: '200px',
+          paddingTop: '250px',
           paddingBottom: '100px'
         }}>
-          <Row className="show-grid">
-            <Col xs={12} xsPush={5} md={8} mdPush={4}>
-              <div className='text-container'>
+          <Row className='show-grid'>
+            <Col xs={12} md={8} mdPush={2}>
+              <div className='text-container' style={{
+                color: '#39383D'
+              }}
+
+              >
                 { !!title ?
                     <h2 className = 'title' style={{
-                      fontSize: '7vw'
+                      fontSize: '7vw',
+                      textAlign: 'center',
+                      fontFamily: 'fantasy',
+                      fontWeight: '500',
+                      fontStyle: 'oblique'
                     }}> 
                       { title }
                     </h2>
                     :
                     null
                 }
-                <h5>
+                <h4 style={{
+                  fontSize: '2vw',
+                  letterSpacing: '0.5vw',
+                  textTransform: 'uppercase',
+                  textAlign: 'center'
+                }}>
                   { this.props.subTitle }
-                </h5>
+                </h4>
                 <p>
                   {this.props.description}
                 </p>

@@ -25,7 +25,6 @@ const ProjectDisplay = React.createClass({
 	},
 
 	handleModalClose() {
-		console.log('hi');
 		this.setState({
 			currentOpen: NO_MODAL_INDEX
 		});
@@ -56,12 +55,20 @@ const ProjectDisplay = React.createClass({
 
 		return (
 			<div>
-				<p style={{
-					fontSize: '5em'
-				}}> { props.projectTitle } </p>
 				<div style={{
-					overflow: 'overlay',
+					paddingBottom: '20px',
+					paddingTop: '30px',
+					fontSize: '7vw',
+					textAlign: 'center',
+					fontFamily: 'fantasy',
+					fontWeight: '500',
+					fontStyle: 'oblique',
 					backgroundColor: 'black',
+					color: 'white'
+				}}> { props.projectTitle } </div>
+				<div style={{
+					overflow: 'hidden',
+					backgroundColor: 'white',
 					paddingTop: '20px',
 					paddingBottom: '20px',
 					paddingLeft: '10vw',
