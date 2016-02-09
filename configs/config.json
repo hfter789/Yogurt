@@ -12,15 +12,15 @@
     "projectImages": [
       {
         "link": "../resources/jimmy/projectImages/react.png",
-        "desc": "**In Yahoo** <br/> I worked across news, style, movies, autos in React. my role includes: \n - Feature Development \n - Bug Fixing \n - Performance Improvement \n - Build Monitoring \n - Testing"
+        "desc": "**In Yahoo** <br/> I worked across news, style, movies, autos in React. my role includes: <br/> Feature Development, Bug Fixing, Performance Improvement, Build Monitoring, Testing.<br/>**This site** is also written in React."
       },
       {
         "link": "../resources/jimmy/projectImages/nodejs.png",
-        "desc": "**In Yahoo** <br/> I implemented a configuration middleware for the configuration team. <br/> This feature can parse complicated configuration file retrieved from the backend and send the simplified data to the frontend <br/><br/><br/><br/><br/>"
+        "desc": "**In Yahoo** <br/> I implemented a configuration middleware for the configuration team. <br/> This feature can parse complicated configuration file retrieved from the backend and send the simplified data to the frontend."
       },
       {
         "link": "../resources/jimmy/projectImages/emberjs.png",
-        "desc": "**In Yahoo** <br/> I implemented a new UI for the configuration team to simplify the display of configuration files. <br/> This feature drastically increases the usability of the configuration web app"
+        "desc": "**In Yahoo** <br/> I implemented a new UI for the configuration team to simplify the display of configuration files. <br/> This feature drastically increases the usability of the configuration web app."
       },
       {
         "link": "../resources/jimmy/projectImages/python.png",

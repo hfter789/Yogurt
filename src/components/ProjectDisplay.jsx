@@ -1,5 +1,5 @@
 import React from 'react';
-import {Col} from 'react-bootstrap';
+import {Col, Button} from 'react-bootstrap';
 import ImageItem from './ImageItem';
 
 const ProjectDisplay = React.createClass({
@@ -47,6 +47,14 @@ const ProjectDisplay = React.createClass({
 					paddingTop: '20px'
 				}}>
 			        { this.renderImages() }
+				</div>
+				<div style={{
+					textAlign: 'center',
+					fontFamily: 'handwrite'
+				}}>
+					<Button style={{
+						paddingTop: '12px'
+					}}>READMORE</Button>
 				</div>
 			</div>
 		);
