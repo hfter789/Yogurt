@@ -1,19 +1,24 @@
 import React from 'react';
-import {Col} from 'react-bootstrap';
+import {Col, Image} from 'react-bootstrap';
+import marked from 'marked';
 
 const ProjectDisplay = React.createClass({
     propTypes: {
-        image: React.PropTypes.object.isRequired,
-        handleImageClick: React.PropTypes.func
+        image: React.PropTypes.object.isRequired
     },
 
     render: function() {
-        let props = this.props;
+        let image = this.props.image;
         return (
-            <Col xs={6} md={4} style={{
-                padding: '20px'
+            <Col xs={6} md={3} style={{
+                padding: '20px',
+                fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif'
             }}> 
-                <img className='project-image' src={props.image.link} onClick={props.handleImageClick}/>
+                <Image src={image.link} style={{
+                    width: '100%',
+                    height: '100%'
+                }}/>
+                <span dangerouslySetInnerHTML={{__html:marked(image.desc)}} />
             </Col>
         );
     }

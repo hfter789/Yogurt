@@ -34,8 +34,9 @@ const InfoBody = React.createClass({
                     <h2 className = 'title' style={{
                       fontSize: '7vw',
                       textAlign: 'center',
-                      fontFamily: 'fantasy',
+                      fontFamily: 'handwrite',
                       fontWeight: '500',
+                      letterSpacing: '10px',
                       fontStyle: 'oblique'
                     }}> 
                       { title }
