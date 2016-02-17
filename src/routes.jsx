@@ -1,9 +1,9 @@
 import React from 'react';
 import {Router, IndexRoute, Route, Link} from 'react-router';
-import ParallaxGallery from './ParallaxGallery';
-import Root from './Root';
-import Navigation from './Navigation';
-import SiteBody from './SiteBody';
+import ParallaxGallery from './components/ParallaxGallery';
+import Root from './components/Root';
+import Navigation from './components/Navigation';
+import SiteBody from './components/SiteBody';
 
 const routes = (
   <Route path="/" component={Root}>

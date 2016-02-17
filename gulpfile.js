@@ -1,37 +1,34 @@
 var gulp = require('gulp');
-var nodemon = require('gulp-nodemon');
-var browserify = require('browserify');
-var source = require('vinyl-source-stream');
-var babel = require('gulp-babel');
-var del = require('del');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var sourcemaps = require('gulp-sourcemaps');
+var gutil = require("gulp-util");
+var nodemon = require("gulp-nodemon")
+var webpack = require("webpack");
+var WebpackDevServer = require("webpack-dev-server");
+var webpackConfig = require("./webpack.config.js");
+var stream = require('webpack-stream');
 
-gulp.task('clean', function () {
-  return del(['dist/**/*']);
+var path = {
+  ALL: ['src/**/*.jsx', 'src/**/*.js'],
+  DEST_BUILD: 'public/js'
+};
+
+gulp.task('webpack', [], function() {
+  return gulp.src(path.ALL) // gulp looks for all source files under specified path
+    .pipe(sourcemaps.init({loadMaps: true})) // creates a source map which would be very helpful for debugging by maintaining the actual source code structure
+    .pipe(stream(webpackConfig)) // blend in the webpack config into the source files
+    .pipe(uglify())// minifies the code for better compression
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(path.DEST_BUILD));
 });
 
-gulp.task('bundle', ['transpile'], function () {
-  browserify({
-    entries: './dist/components/App.js',
-    extensions: ['.js'],
-    debug: true
-  })
-  .bundle()
-  .pipe(source('bundle.js'))
-  .pipe(gulp.dest('./public/js'));
-});
-
-gulp.task('transpile', function () {
-    return gulp.src('./src/**/*.jsx')
-        .pipe(babel({
-            presets: ['es2015', 'react']
-        }))
-        .pipe(gulp.dest('./dist'));
-});
-
-gulp.task('dev', ['bundle'], function () {
+gulp.task('dev', ['webpack'], function () {
     nodemon({
         script: './dist/Server.js'
         , ext: 'jsx json'
-        , tasks: ['bundle']
+        , tasks: ['webpack']
     });
 });
+
+gulp.task('default', ['watch']);

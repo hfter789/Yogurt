@@ -1,5 +1,5 @@
 import express from 'express';
-import routes from './components/routes';
+import routes from './routes';
 import { match, RoutingContext } from 'react-router';
 import { renderToString } from 'react-dom/server';
 import React from 'react';
