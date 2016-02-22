@@ -61,7 +61,7 @@ const About = React.createClass({
                         width: '100%',
                         zIndex: 1,
                         display: this.state.showImage ? '' : 'none',
-                        clip: 'rect(0, auto, auto, 0);'
+                        clip: 'rect(0, auto, auto, 0)'
                     }}>
                         <div style = {{
                             top: '50px',
