@@ -52,9 +52,6 @@ const ProjectDisplay = React.createClass({
 					textAlign: 'center',
 					fontFamily: 'handwrite'
 				}}>
-					<Button style={{
-						paddingTop: '12px'
-					}}>READMORE</Button>
 				</div>
 			</div>
 		);

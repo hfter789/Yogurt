@@ -11,7 +11,7 @@ const SiteBody = React.createClass({
 		let site = this.props.route.site;
 		let siteConfig = config[site];
 		let path = siteConfig.coverImage;
-		let galleryList = siteConfig.galleryList;
+		let {galleryList, contactInfo} = siteConfig;
 		return (
 			<div>
 				<InfoBody

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Nav, NavItem, Navbar} from 'react-bootstrap';
+import {Nav, NavItem, Navbar, NavDropdown, MenuItem} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import config from '../../configs/config.json';
 
@@ -20,20 +20,28 @@ const Navigation = React.createClass({
 
 	renderNavItems(site) {
 		return (
-			<div className="header-container">
+			<div className='header-container'>
 				<Nav>
 					<LinkContainer to={'/' + site}>
-						<NavItem eventKey={1}>HOME</NavItem>
+						<NavItem eventKey={1}>Home</NavItem>
 					</LinkContainer>
 					<LinkContainer to={'/' + site + '/about'}>
-						<NavItem eventKey={2}>ABOUT ME</NavItem>
+						<NavItem eventKey={2}>About</NavItem>
 					</LinkContainer>
-					{ /*<NavItem eventKey={2} href='#'>Projects</NavItem> */}
-					{ /*<NavItem eventKey={2} href='#'>Contact Me</NavItem> */}
 				</Nav>
 				<Nav pullRight>
-			        <NavItem eventKey={1} href="#">Resume</NavItem>
-			      </Nav>
+					<NavDropdown eventKey={3} title='Find Me' id='nav-dropdown'>
+						{ config[site].contacts.map(function (contact) {
+							return <a style={{
+								display: 'block',
+								padding: '0 10px',
+								textAlign: 'center',
+								height: '30px',
+								lineHeight: '30px'
+							}}class='dropdown-item' href={contact.link}>{contact.name}</a>;
+						})}
+					</NavDropdown>
+				</Nav>
 			</div>
 		);
 	},

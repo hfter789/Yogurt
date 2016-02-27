@@ -9,6 +9,20 @@
     "subTitle": "Web Developer / Learner",
     "brand": "JC",
     "projectTitle": "What I Study",
+    "contacts": [
+      {
+        "name": "Github",
+        "link": "//github.com/hfter789"
+      },
+      {
+        "name": "LinkedIn",
+        "link": "//www.linkedin.com/in/jiaming-jimmy-chen-02572329"
+      },
+      {
+        "name": "Resume",
+        "link": "/resources/jimmy/TechResume.pdf"
+      }
+    ],
     "projectImages": [
       {
         "link": "../resources/jimmy/projectImages/react.png",
@@ -24,7 +38,7 @@
       },
       {
         "link": "../resources/jimmy/projectImages/python.png",
-        "desc": "**In School** <br/> I architected and implemented a Tor Router that uses TorNode to secure users' browsing connection."
+        "desc": "**In School** <br/> I architected and implemented a Tor proxy that secure users' browsing connection."
       }
 
     ],
