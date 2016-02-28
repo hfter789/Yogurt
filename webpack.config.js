@@ -1,5 +1,4 @@
 import path from 'path';
-import extend from 'extend';
 import webpack from 'webpack';
 
 const config = {
